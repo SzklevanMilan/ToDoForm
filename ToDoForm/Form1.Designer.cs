@@ -43,6 +43,8 @@
             this.lbTodo = new System.Windows.Forms.ListBox();
             this.tbBevitel = new System.Windows.Forms.TextBox();
             this.btnKilepes = new System.Windows.Forms.Button();
+            this.ofdMegnyitas = new System.Windows.Forms.OpenFileDialog();
+            this.sfdMentes = new System.Windows.Forms.SaveFileDialog();
             this.mMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,24 +73,26 @@
             // mBeolvasas
             // 
             this.mBeolvasas.Name = "mBeolvasas";
-            this.mBeolvasas.Size = new System.Drawing.Size(125, 22);
+            this.mBeolvasas.Size = new System.Drawing.Size(180, 22);
             this.mBeolvasas.Text = "Beolvasás";
+            this.mBeolvasas.Click += new System.EventHandler(this.mBeolvasas_Click);
             // 
             // mMentes
             // 
             this.mMentes.Name = "mMentes";
-            this.mMentes.Size = new System.Drawing.Size(125, 22);
+            this.mMentes.Size = new System.Drawing.Size(180, 22);
             this.mMentes.Text = "Mentés";
+            this.mMentes.Click += new System.EventHandler(this.mMentes_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(122, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // mKilepes
             // 
             this.mKilepes.Name = "mKilepes";
-            this.mKilepes.Size = new System.Drawing.Size(125, 22);
+            this.mKilepes.Size = new System.Drawing.Size(180, 22);
             this.mKilepes.Text = "Kilépés";
             this.mKilepes.Click += new System.EventHandler(this.mKilepes_Click);
             // 
@@ -127,6 +131,7 @@
             this.btnKivesz.Size = new System.Drawing.Size(40, 40);
             this.btnKivesz.TabIndex = 4;
             this.btnKivesz.UseVisualStyleBackColor = true;
+            this.btnKivesz.Click += new System.EventHandler(this.btnKivesz_Click);
             // 
             // btnListabol
             // 
@@ -189,6 +194,19 @@
             this.btnKilepes.UseVisualStyleBackColor = true;
             this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
             // 
+            // ofdMegnyitas
+            // 
+            this.ofdMegnyitas.DefaultExt = "txt";
+            this.ofdMegnyitas.FileName = "openFileDialog1";
+            this.ofdMegnyitas.Filter = "ToDo lista|*.txt";
+            this.ofdMegnyitas.Title = "ToDo lista beolvasása";
+            // 
+            // sfdMentes
+            // 
+            this.sfdMentes.DefaultExt = "txt";
+            this.sfdMentes.Filter = "ToDo lista|*.txt";
+            this.sfdMentes.Title = "ToDo lista mentése";
+            // 
             // frmKezdo
             // 
             this.AcceptButton = this.btnFelvitel;
@@ -232,6 +250,8 @@
         private System.Windows.Forms.ListBox lbTodo;
         private System.Windows.Forms.TextBox tbBevitel;
         private System.Windows.Forms.Button btnKilepes;
+        private System.Windows.Forms.OpenFileDialog ofdMegnyitas;
+        private System.Windows.Forms.SaveFileDialog sfdMentes;
     }
 }
 

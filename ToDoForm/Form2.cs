@@ -27,6 +27,7 @@ namespace ToDoForm
 
         private void lbTargyak_DoubleClick(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             SelectedTodo = lbTargyak.SelectedItem.ToString();
             this.Close();
         }
